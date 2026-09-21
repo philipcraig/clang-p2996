@@ -86,6 +86,7 @@
 #endif
 
 #if (defined(__STDC_VERSION__) && __STDC_VERSION__ >= 202311L) ||              \
+    (defined(__cplusplus) && __cplusplus >= 202302L) ||                        \
     !defined(__STRICT_ANSI__)
 #  undef INFINITY
 #  undef NAN
@@ -159,6 +160,7 @@
 #endif
 
 #if (defined(__STDC_VERSION__) && __STDC_VERSION__ >= 202311L) ||              \
+    (defined(__cplusplus) && __cplusplus >= 202302L) ||                        \
     !defined(__STRICT_ANSI__)
    /* C23 5.2.5.3.3p29-30 */
 #  define INFINITY (__builtin_inff())
