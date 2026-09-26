@@ -3573,7 +3573,8 @@ bool constant_of(APValue &Result, ASTContext &C, MetaActions &Meta,
                     false);
       ConstantTy = QualType{};
     }
-    return SetAndSucceed(Result, Constant.Lift(ConstantTy));
+    return SetAndSucceedWithLift(Result, Diagnoser, Range, Constant,
+                                 ConstantTy);
   }
   case ReflectionKind::Attribute: // TODO P3385 anything to do ?
   case ReflectionKind::Statement:
